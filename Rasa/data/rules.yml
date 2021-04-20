@@ -1,0 +1,37 @@
+version: "2.0"
+
+rules:
+        #- rule: Say hello and ask how to help
+        #  steps:
+        #  - intent: greet
+        #  - action: utter_greet
+
+        #- rule: query instructor
+        #  steps:
+        #  - intent: query_instructor
+        #  - action: action_retrieve_instructor
+
+        #- rule: query prerequisites
+        #  steps:
+        #  - intent: query_prerequisites
+        #  - action: action_retrieve_prerequisites
+
+        #- rule: query textbook
+        #  steps:
+        #  - intent: query_textbook
+        #  - action: action_retrieve_textbook
+
+        #- rule: query email
+        #  steps:
+        #  - intent: query_email
+        #  - action: action_retrieve_email
+
+        #- rule: query office
+        #  steps:
+        #  - intent: query_office
+        #  - action: action_retrieve_office
+
+        #- rule: query phone
+        #  steps:
+        #  - intent: query_phone
+        #  - action: action_retrieve_phone

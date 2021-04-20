@@ -1,0 +1,1 @@
+To get Rasa integrated into a Moodle page, copy the code from the HTML file in this directory.

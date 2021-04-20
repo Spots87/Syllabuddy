@@ -1,0 +1,22 @@
+Rasa Webchat Placeholder.<br>Click the Message Icon Below to get Syllabus Help<br>
+<script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.0/lib/index.js"></script>
+<script>
+    let courseID = document.getElementById("page-navbar").children[0].children[0].children[2].children[0].text
+    let urlParams = new URLSearchParams(window.location.search);
+    let moodleID = urlParams.get('id');
+    console.log(courseID)
+    WebChat.default({
+        interval: 0, // 1000 ms between each message
+        customData: {
+            language: "en"
+        },
+        socketUrl: "syllabuddy.cmix.louisiana.edu",
+        title: "Syllabuddy",
+        subtitle: "Syllabus Bot",
+        hideWhenNotConnected: false,
+        customData: {
+            courseID: courseID,
+            moodleID: moodleID,
+        },
+    })
+</script>

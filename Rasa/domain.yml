@@ -1,0 +1,25 @@
+version: "2.0"
+
+intents:
+  - greet
+  - query_instructor
+  - query_prerequisites
+  - query_textbook
+  - query_email
+  - query_office
+  - query_phone
+
+actions:
+  - action_retrieve_instructor
+  - action_retrieve_prerequisites
+  - action_retrieve_textbook
+  - action_retrieve_email
+  - action_retrieve_office
+  - action_retrieve_phone
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help?"
+
+session_config:
+  session_expiration_time: 60

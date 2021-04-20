@@ -1,0 +1,38 @@
+version: "2.0"
+
+stories:
+
+- story: hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: ask instructor
+  steps:
+  - intent: query_instructor
+  - action: action_retrieve_instructor
+
+- story: ask prerequisites
+  steps:
+  - intent: query_prerequisites
+  - action: action_retrieve_prerequisites
+
+- story: ask textbook
+  steps:
+  - intent: query_textbook
+  - action: action_retrieve_textbook
+
+- story: ask email
+  steps:
+  - intent: query_email
+  - action: action_retrieve_email
+
+- story: ask office
+  steps:
+  - intent: query_office
+  - action: action_retrieve_office
+
+- story: ask phone
+  steps:
+  - intent: query_phone
+  - action: action_retrieve_phone

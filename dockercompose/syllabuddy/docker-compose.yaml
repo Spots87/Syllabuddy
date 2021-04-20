@@ -1,0 +1,53 @@
+version: '3'
+services:
+  rasa:
+    container_name: rasa-server
+    image: rasa/rasa:2.1.2-full
+    ports:
+      - 5005:5005
+    volumes:
+      - ../../Rasa:/app
+    command: >
+      run
+      -m models
+      --cors "*"
+      --enable-api
+      --debug
+    networks:
+      - syllabuddy-network
+  rasa-action-server:
+    container_name: rasa-action-server
+    build:
+      context: .
+    expose:
+      - "5055"
+    volumes:
+      - ../../Rasa/actions:/app/actions
+      - "$PWD/mongo/certs/rasa-action.pem:/etc/ssl/rasa-action.pem"
+      - "$PWD/mongo/certs/rootCA.pem:/etc/ssl/rootCA.pem"
+    networks:
+      - syllabuddy-network
+  mongo:
+    container_name: syllabuddy-mongo
+    image: mongo
+    expose:
+      - "27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=syllabuddy
+    volumes:
+      - "$PWD/mongo/mongo-entrypoint/:/docker-entrypoint-initdb.d/"
+      - "$PWD/mongo/certs/mongodb.pem:/data/ssl/mongodb.pem"
+      - "$PWD/mongo/certs/rootCA.pem:/data/ssl/rootCA.pem"
+      - "$PWD/mongo/data/db:/data/db"
+      - "$PWD/mongo/data/log:/var/log/mongodb"
+    networks:
+      - syllabuddy-network
+    command: >
+      mongod
+      --tlsMode requireTLS 
+      --tlsCertificateKeyFile /data/ssl/mongodb.pem
+      --tlsCAFile /data/ssl/rootCA.pem
+networks:
+  syllabuddy-network:
+    name: syllabuddy-network

@@ -1,0 +1,110 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: query_instructor
+  examples: |
+    - who is the course instructor?
+    - who teaches this class?
+    - who is the teacher?
+    - what is the name of the teacher?
+    - what is the name of the professor?
+    - who is the professor?
+    - whos the professor?
+    - whos the teacher?
+    - whos the instructor?
+    - professor?
+    - teacher?
+    - instructor?
+
+- intent: query_prerequisites
+  examples: |
+    - are there any prereqs in this class?
+    - are there any prerequisites in this class?
+    - is there any prereqs in this class?
+    - is there any prerequisites in this class?
+    - is there any prereqs?
+    - is there any prerequisites?
+    - are there any prereqs?
+    - are there any prerequisites?
+    - prereqs?
+    - prerequisites?
+    - does this class have any prereqs?
+    - does this class have any prerequisites?
+    - do i need another class before taking this?
+    - what other classes do i need to take this class?
+
+- intent: query_textbook
+  examples: |
+    - what textbooks do i need?
+    - textbooks?
+    - what textbooks are required?
+    - do i need any textbooks?
+    - do i need any texts?
+    - what books do i need?
+    - books?
+    - book?
+    - do i need a book?
+    - do i need any books?
+    - what are the textbooks for this class?
+
+- intent: query_email
+  examples: |
+    - what is the teachers email?
+    - what is the professors email?
+    - what is the instructors email?
+    - what email can i reach the professor at?
+    - email?
+    - email address?
+    - whats the teachers email?
+    - whats the professors email?
+    - whats the instructors email?
+
+- intent: query_office
+  examples: |
+    - what is the teachers office?
+    - what is the professors office?
+    - what is the instructors office?
+    - where is the teachers office?
+    - where is the professors office?
+    - where is the instructors office?
+    - office?
+    - office location?
+    - whats the teachers office?
+    - whats the professors office?
+    - whats the instructors office?
+    - wheres the office
+    - where is the office
+
+- intent: query_phone
+  examples: |
+    - what is the teachers phone?
+    - what is the professors phone?
+    - what is the instructors phone?
+    - what is the teachers phone number?
+    - what is the professors phone number?
+    - what is the instructors phone number?
+    - what phone number can i reach the professor at?
+    - phone?
+    - phone number?
+    - whats the teachers phone?
+    - whats the professors phone?
+    - whats the instructors phone?
+    - whats the teachers phone number?
+    - whats the professors phone number?
+    - whats the instructors phone number?

@@ -1,0 +1,4 @@
+dockercompose/syllabuddy/mongo/data/*
+*.pem
+*.pyc
+Rasa/models/*
